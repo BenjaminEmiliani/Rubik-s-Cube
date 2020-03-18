@@ -14,9 +14,46 @@ class Cubie {
    strokeWeight(8);
    pushMatrix();
    translate(pos.x,pos.y,pos.z);
-   box(sideLen);
+   
+   beginShape(QUADS);
+   float r = sideLen/2;
+   
+  //z-axis 
+   vertex( -r, -r , r);
+   vertex(  r, -r , r);
+   vertex(  r,  r , r);
+   vertex( -r,  r , r);
+   
+   vertex( -r, -r , -r);
+   vertex(  r, -r , -r);
+   vertex(  r,  r , -r);
+   vertex( -r,  r , -r);
+   
+   //y-axis 
+   vertex( -r,  r , -r);
+   vertex(  r,  r , -r);
+   vertex(  r,  r ,  r);
+   vertex( -r,  r ,  r);
+   
+   vertex( -r, -r , -r);
+   vertex(  r, -r , -r);
+   vertex(  r, -r ,  r);
+   vertex( -r, -r ,  r);
+   
+    //x-axis 
+   vertex(  r, -r , -r);
+   vertex(  r,  r , -r);
+   vertex(  r,  r ,  r);
+   vertex(  r, -r ,  r);
+   
+   vertex( -r, -r , -r);
+   vertex( -r,  r , -r);
+   vertex( -r,  r ,  r);
+   vertex( -r, -r ,  r);
+   
+     
+   endShape();
    popMatrix();
- }
-  
+   }
   
 }
